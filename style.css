@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+.player-panel {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 5vh;
+
+}
+
+.player-panel img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.player-margin {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.player-inactive {
+    opacity: 0.5;
+}
+
+td {
+    width: 200px;
+    height: 200px;
+    border: 8px solid black;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+td:hover {
+    background-color: rgba(25, 221, 0, 0.5);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:first-child td {
+    border-top: 0;
+}
+
+tr td:first-child {
+    border-left: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.shape {
+    position: absolute;
+    width: 150px;
+}
+
+.horizontal-line {
+    position: absolute;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 500px;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 1;
+}
+
+.make-vertikal {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.end-screen {
+    display: flex;
+    justify-content: center;
+}
+
+.game-over {
+    position: absolute;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart-btn {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #347f0b;
+    z-index: 3;
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 120px;
+    color: white;
+}
+
+.restart-btn:hover {
+    background-color: rgb(107, 241, 107);
+    color: black;
+}
